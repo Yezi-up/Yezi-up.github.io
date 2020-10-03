@@ -236,12 +236,12 @@ vagrant up</code></pre>
 <h3 id="2-安装一个虚拟机"><a href="#2-安装一个虚拟机" class="headerlink" title="2. 安装一个虚拟机"></a>2. 安装一个虚拟机</h3><p>注意：执行init的目录要和up的目录为同一目录。</p>
 <p><code>vagrant init centos/7</code> 的目的是创建<strong>Vagrantfile</strong>， 该文件是虚拟机的配置文件</p>
 <p><code>vagrant up</code> 根据当前目录下的vagrantfile启动一个虚拟机</p>
-<p><img src="http://img.yeziup.com/img/install.png" srcset="/img/loading.gif" alt="install"></p>
+<p><img src="https://img.yeziup.com/img/install.png" srcset="/img/loading.gif" alt="install"></p>
 <h3 id="3-进入虚拟机"><a href="#3-进入虚拟机" class="headerlink" title="3. 进入虚拟机"></a>3. 进入虚拟机</h3><p>通过运行<code>vagrant ssh</code>可以进入虚拟机，默认的登录用户为vagrant，其实在上图的启动日志中我们也可以看到Vagrant帮我们创建了一个用户vagrant，并且生成了ssh的秘钥。</p>
 <p>root的密码为vagrant</p>
-<p><img src="http://img.yeziup.com/img/ssh.png" srcset="/img/loading.gif" alt="ssh"></p>
+<p><img src="https://img.yeziup.com/img/ssh.png" srcset="/img/loading.gif" alt="ssh"></p>
 <p>这时候我们打开VirtualBox,也可以看到我们当前启动的虚拟机。</p>
-<p><img src="http://img.yeziup.com/img/virtualbox.png" srcset="/img/loading.gif" alt="virtualbox"></p>
+<p><img src="https://img.yeziup.com/img/virtualbox.png" srcset="/img/loading.gif" alt="virtualbox"></p>
 <h3 id="4-停止虚拟机"><a href="#4-停止虚拟机" class="headerlink" title="4. 停止虚拟机"></a>4. 停止虚拟机</h3><p>可以直接在VirtualBox中停止，也可以执行命令<code>vagrant halt</code>。</p>
 <h1 id="Vagrantfile"><a href="#Vagrantfile" class="headerlink" title="Vagrantfile"></a>Vagrantfile</h1><h3 id="1-Vagrantfile配置"><a href="#1-Vagrantfile配置" class="headerlink" title="1. Vagrantfile配置"></a>1. Vagrantfile配置</h3><pre><code class="hljs ruby"><span class="hljs-comment"># -*- mode: ruby -*-</span>
 <span class="hljs-comment"># vi: set ft=ruby :</span>
