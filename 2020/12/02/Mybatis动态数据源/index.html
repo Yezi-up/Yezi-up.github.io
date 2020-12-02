@@ -220,7 +220,7 @@
             <h1 style="display: none">Mybatis动态数据源</h1>
             
             <div class="markdown-body" id="post-body">
-              <h1 id="业务场景"><a href="#业务场景" class="headerlink" title="业务场景"></a>业务场景</h1><p>现有股票与基金业务，不同的业务分在不同的库中，但有些业务类似可以基于同一套代码，例如组织架构、权限控制与客户管理，但是受监管部门监管，必须将数据拆分在不同的数据库中</p>
+              <h1 id="业务场景"><a href="#业务场景" class="headerlink" title="业务场景"></a>业务场景</h1><p>现有股票与基金业务，不同的业务分在不同的库中，但有些业务类似可以基于同一套代码，例如组织架构、权限控制与客户管理，但是为区分业务线，要将数据拆分在不同的数据库中</p>
 <h1 id="达成效果"><a href="#达成效果" class="headerlink" title="达成效果"></a>达成效果</h1><p>不同的业务传对应的业务参数，保存到相应的库中</p>
 <h2 id="基金业务"><a href="#基金业务" class="headerlink" title="基金业务"></a>基金业务</h2><h3 id="新增用户"><a href="#新增用户" class="headerlink" title="新增用户"></a>新增用户</h3><p><img src="https://img.yeziup.com/img/mongodb_1/image-20201202214530335.png" srcset="/img/loading.gif" alt="image-20201202214530335"></p>
 <h3 id="查询用户"><a href="#查询用户" class="headerlink" title="查询用户"></a>查询用户</h3><p><img src="https://img.yeziup.com/img/mongodb_1/image-20201202214834950.png" srcset="/img/loading.gif" alt="image-20201202214834950"></p>
@@ -304,7 +304,7 @@
 
 <span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span></code></pre>
 
-<h2 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2. 配置文件"></a>2. 配置文件</h2><p>不同的业务线配置不同的数据库</p>
+<h3 id="2-配置文件"><a href="#2-配置文件" class="headerlink" title="2. 配置文件"></a>2. 配置文件</h3><p>不同的业务线配置不同的数据库</p>
 <pre><code class="hljs yaml"><span class="hljs-attr">spring:</span>
   <span class="hljs-attr">datasource:</span>
     <span class="hljs-attr">fund:</span>
@@ -583,6 +583,10 @@
     &#125;
 
 &#125;</code></pre>
+
+<h1 id="踩到的坑"><a href="#踩到的坑" class="headerlink" title="踩到的坑"></a>踩到的坑</h1><p>注意切面类返回值！！！</p>
+<p><img src="https://img.yeziup.com/img/mongodb_1/20201202222202.png" srcset="/img/loading.gif" alt="为啥返回null"></p>
+
             </div>
             <hr>
             <div>
